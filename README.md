@@ -16,7 +16,7 @@ A Flutter note-taking application with a clean UI and essential features.
 
 | Splash Screen | Login Screen | Notes | Settings |
 |---------------|--------------|-------|----------|
-| <img src="sigma_note_app/assets/images/splash.png" width="200"> | <img src="sigma_note_app/assets/images/loginpage.png" width="200"> | <img src="sigma_note_app/assets/images/nothomescreen.png" width="200"> | <img src="sigma_note_app/assets/images/settingsscreen.png" width="200"> |
+| <img src="https://raw.githubusercontent.com/emmann-code/sigmalogicnoteapp/main/sigma_note_app/assets/images/splash.png" width="200"> | <img src="https://raw.githubusercontent.com/emmann-code/sigmalogicnoteapp/main/sigma_note_app/assets/images/loginpage.png" width="200"> | <img src="https://raw.githubusercontent.com/emmann-code/sigmalogicnoteapp/main/sigma_note_app/assets/images/nothomescreen.png" width="200"> | <img src="https://raw.githubusercontent.com/emmann-code/sigmalogicnoteapp/main/sigma_note_app/assets/images/settingsscreen.png" width="200"> |
 
 ## Getting Started
 
