@@ -9,14 +9,14 @@ import '../widgets/custom_error_widget.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  bool _hasShownError = false;
+  bool hasShownError = false;
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
-    if (!_hasShownError) {
-      _hasShownError = true;
+    if (!hasShownError) {
+      hasShownError = true;
 
       Future.delayed(const Duration(seconds: 5), () {
-        _hasShownError = false;
+        hasShownError = false;
       });
 
       return CustomErrorWidget(errorDetails: details);
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: (context, orientation, screenType) {
         return MaterialApp(
-          title: 'lao_note',
+          title: 'Sigma Note App',
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: ThemeMode.light,
@@ -50,7 +50,6 @@ class MyApp extends StatelessWidget {
           routes: AppRoutes.routes,
           initialRoute: AppRoutes.initial,
 
-          /// ✅ Device Preview integration
           builder: (context, child) {
             return DevicePreview.appBuilder(
               context,
@@ -62,8 +61,6 @@ class MyApp extends StatelessWidget {
               ),
             );
           },
-
-          /// ✅ Make DevicePreview control locale
           locale: DevicePreview.locale(context),
         );
       },

@@ -12,7 +12,6 @@ class LoginFooterWidget extends StatelessWidget {
       children: [
         _buildDemoCredentials(),
         SizedBox(height: 3.h),
-        _buildSecurityBadge(),
       ],
     );
   }
@@ -77,27 +76,6 @@ class LoginFooterWidget extends StatelessWidget {
               fontWeight: FontWeight.w500,
               fontFamily: 'monospace',
             ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildSecurityBadge() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CustomIconWidget(
-          iconName: 'security',
-          color: AppTheme.statusSuccess,
-          size: 16,
-        ),
-        SizedBox(width: 2.w),
-        Text(
-          'Secured with encryption',
-          style: AppTheme.lightTheme.textTheme.bodySmall?.copyWith(
-            color: AppTheme.textSecondary,
-            fontWeight: FontWeight.w500,
           ),
         ),
       ],

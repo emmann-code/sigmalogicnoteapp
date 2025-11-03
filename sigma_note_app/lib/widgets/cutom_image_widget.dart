@@ -2,15 +2,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../core/app_export.dart';
 
 extension ImageTypeExtension on String {
   ImageType get imageType {
-    if (this.startsWith('http') || this.startsWith('https')) {
+    if (startsWith('http') || startsWith('https')) {
       return ImageType.network;
-    } else if (this.endsWith('.svg')) {
+    } else if (endsWith('.svg')) {
       return ImageType.svg;
-    } else if (this.startsWith('file: //')) {
+    } else if (startsWith('file: //')) {
       return ImageType.file;
     } else {
       return ImageType.png;
@@ -22,7 +21,8 @@ enum ImageType { svg, png, network, file, unknown }
 
 // ignore_for_file: must_be_immutable
 class CustomImageWidget extends StatelessWidget {
-  CustomImageWidget({
+  const CustomImageWidget({
+    super.key,
     this.imageUrl,
     this.height,
     this.width,
@@ -110,7 +110,7 @@ class CustomImageWidget extends StatelessWidget {
     if (imageUrl != null) {
       switch (imageUrl!.imageType) {
         case ImageType.svg:
-          return Container(
+          return SizedBox(
             height: height,
             width: width,
             child: SvgPicture.asset(
@@ -118,9 +118,9 @@ class CustomImageWidget extends StatelessWidget {
               height: height,
               width: width,
               fit: fit ?? BoxFit.contain,
-              colorFilter: this.color != null
+              colorFilter: color != null
                   ? ColorFilter.mode(
-                      this.color ?? Colors.transparent,
+                      color ?? Colors.transparent,
                       BlendMode.srcIn,
                     )
                   : null,
@@ -143,7 +143,7 @@ class CustomImageWidget extends StatelessWidget {
             fit: fit,
             imageUrl: imageUrl!,
             color: color,
-            placeholder: (context, url) => Container(
+            placeholder: (context, url) => SizedBox(
               height: 30,
               width: 30,
               child: LinearProgressIndicator(

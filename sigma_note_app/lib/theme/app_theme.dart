@@ -226,8 +226,9 @@ class AppTheme {
         return borderSubtle;
       }),
       trackColor: WidgetStateProperty.resolveWith((states) {
-        if (states.contains(WidgetState.selected))
+        if (states.contains(WidgetState.selected)) {
           return accentCoral.withValues(alpha: 0.3);
+        }
         return borderSubtle.withValues(alpha: 0.5);
       }),
     ),

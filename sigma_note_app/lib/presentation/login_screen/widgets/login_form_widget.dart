@@ -289,7 +289,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
         ),
         child: widget.isLoading
             ? SizedBox(
-                height: 20,
+                height: 35,
                 width: 20,
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
@@ -304,6 +304,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                   color: AppTheme.primaryWhite,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.5,
+                  fontSize: 12.sp,
                 ),
               ),
       ),

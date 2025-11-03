@@ -215,9 +215,10 @@ class AccountSection extends StatelessWidget {
 
       if (context.mounted) {
         Navigator.of(context).pop(); // Close dialog
+        // Navigator.pushNamed(context, AppRoutes.login);
         Navigator.of(
           context,
-        ).pushNamedAndRemoveUntil('/login-screen', (route) => false);
+        ).pushNamedAndRemoveUntil('/login-screen', (route) => true);
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(

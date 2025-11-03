@@ -47,7 +47,7 @@ class LoginHeaderWidget extends StatelessWidget {
         ),
         SizedBox(width: 3.w),
         Text(
-          'LAO NOTE',
+          'SIGMA NOTE APP',
           style: AppTheme.lightTheme.textTheme.headlineSmall?.copyWith(
             color: AppTheme.textPrimary,
             fontWeight: FontWeight.w700,

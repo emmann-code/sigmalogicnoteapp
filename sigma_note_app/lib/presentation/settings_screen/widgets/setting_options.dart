@@ -232,7 +232,7 @@ class SettingsOptionsSection extends StatelessWidget {
             ),
             SizedBox(width: 3.w),
             Text(
-              'Lao Note',
+              'Sigma Note App',
               style: AppTheme.lightTheme.textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.w600,
               ),
@@ -259,7 +259,7 @@ class SettingsOptionsSection extends StatelessWidget {
             ),
             SizedBox(height: 2.h),
             Text(
-              '© 2024 Lao Note. All rights reserved.',
+              '© 2024 Sigma Note. All rights reserved.',
               style: AppTheme.lightTheme.textTheme.bodySmall?.copyWith(
                 color: AppTheme.textDisabled,
               ),
@@ -316,7 +316,7 @@ class SettingsOptionsSection extends StatelessWidget {
           Switch(
             value: value,
             onChanged: onChanged,
-            activeColor: AppTheme.accentCoral,
+            activeThumbColor: AppTheme.accentCoral,
             inactiveThumbColor: AppTheme.borderSubtle,
             inactiveTrackColor: AppTheme.borderSubtle.withValues(alpha: 0.5),
           ),

@@ -179,9 +179,7 @@ class _SplashScreenState extends State<SplashScreen>
         image: const AssetImage('assets/images/no-image.jpg'),
         fit: BoxFit.cover,
         opacity: 0.1,
-        onError: (exception, stackTrace) {
-          // Fallback to gradient pattern if image not found
-        },
+        onError: (exception, stackTrace) {},
       ),
     );
   }
@@ -203,7 +201,7 @@ class _SplashScreenState extends State<SplashScreen>
             SizedBox(height: 3.h),
             // LAO NOTE text
             Text(
-              'LAO NOTE',
+              'SIGMA NOTE APP',
               style: AppTheme.lightTheme.textTheme.headlineLarge?.copyWith(
                 color: AppTheme.primaryWhite,
                 fontWeight: FontWeight.w700,

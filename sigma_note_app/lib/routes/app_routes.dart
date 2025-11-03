@@ -5,7 +5,6 @@ import '../presentation/login_screen/login_screen.dart';
 import '../presentation/notes_screen/notes_screen.dart';
 
 class AppRoutes {
-  // TODO: Add your routes here
   static const String initial = '/';
   static const String splash = '/splash-screen';
   static const String settings = '/settings-screen';
@@ -18,6 +17,5 @@ class AppRoutes {
     settings: (context) => const SettingsScreen(),
     login: (context) => const LoginScreen(),
     notes: (context) => const NotesScreen(),
-    // TODO: Add your other routes here
   };
 }
